@@ -20,19 +20,38 @@ class Cars {
       this.name = name;
    }
 
-   public String getCapital() {
+   public String getDescription() {
       return this.description;
    }
 
-   public void setCapital(String capital) {
-      this.description = capital;
+   public void setDescription(String description) {
+      this.description = description;
    }
 
-   public int getFlagResource() {
+   public int getCarResource() {
       return this.carResource;
    }
 
-   public void setFlagResource(int flagResource) {
-      this.carResource = flagResource;
+   public void getCarResource(int carResource) {
+      this.carResource = carResource;
+   }
+
+
+
+   public String plus(String description){
+      int value = Integer.parseInt(description);
+      value++;
+      return String.valueOf(value);
+   }
+
+   public String minus(String description){
+      int value = Integer.parseInt(description);
+      if(value > 0 ){
+         value--;
+      }
+      else{
+         value = 0;
+      }
+      return String.valueOf(value);
    }
 }

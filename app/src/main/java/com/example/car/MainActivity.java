@@ -8,6 +8,14 @@ import android.os.Bundle;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private String Complect;
+    public String getComplect() {
+        return this.Complect;
+    }
+    public void setComplect(String complect) {
+        this.Complect = complect;
+    }
+
 
     ArrayList<Cars> cars = new ArrayList<Cars>();
     @Override
@@ -22,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // устанавливаем для списка адаптер
         recyclerView.setAdapter(adapter);
     }
+
     private void setInitialData(){
 
         cars.add(new Cars ("TOYOTA CAMRY", "Бразилиа", R.drawable.camry));
