@@ -4,13 +4,16 @@ class Cars {
    private String name; // название
    private String description;  // описание
    private int carResource; // ресурс машины
+   private String numberOfCars;
 
    public Cars(String name, String description, int car){
 
       this.name=name;
       this.description=description;
+      this.numberOfCars = "0";
       this.carResource=car;
    }
+
 
    public String getName() {
       return this.name;
@@ -36,16 +39,22 @@ class Cars {
       this.carResource = carResource;
    }
 
+   public String getNumberOfCars() {
+      return numberOfCars;
+   }
 
+   public void setNumberOfCars(String numberOfCars) {
+      this.numberOfCars = numberOfCars;
+   }
 
-   public String plus(String description){
-      int value = Integer.parseInt(description);
+   public String plus(String numberOfCars){
+      int value = Integer.parseInt(numberOfCars);
       value++;
       return String.valueOf(value);
    }
 
-   public String minus(String description){
-      int value = Integer.parseInt(description);
+   public String minus(String numberOfCars){
+      int value = Integer.parseInt(numberOfCars);
       if(value > 0 ){
          value--;
       }
